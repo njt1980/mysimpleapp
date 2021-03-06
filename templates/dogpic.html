@@ -1,0 +1,16 @@
+<html>
+    <head><title>Dog Pic</title></head>
+    <body>
+        <img src="{{ dogpic }}"></br></br>
+        <form action="{{ url_for('gimmeadogpic') }}" method="GET">
+            <button type="submit" name="GimmeADogPic">GimmeADogPic</button>
+        </form>
+        <form action="{{ url_for('gimmeaquote') }}" method="GET">
+            <button type="submit" name="GimmeAQuote">GimmeAQuote</button>
+        </form>
+        <form action="{{ url_for('welcome') }}" method="GET">
+            <button type="submit" name="Home">TakeMeHome</button>
+        </form>
+    </body>
+
+</html>

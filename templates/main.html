@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">What do you want?</h1></br></br>
+        <form action="{{ url_for('gimmeaquote') }}" method="GET">
+            <!-- <input type="button" value="MyButton"> -->
+            <button name="GetAQuote" type="submit">GimmeAQuote</button>
+        </form>
+        <form action="{{ url_for('gimmeadogpic')}}" method="GET">
+            <button name="GimmeADogPic" type="submit">GimmeADogPic</button>
+        </form>
+    </body>
+</html>
