@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve main app
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/myapp/mysimplapp 
+Environment="PATH=/myapp/venv/bin"
+ExecStart=/myapp/venv/bin/gunicorn --workers 1 --bind unix:mysimplapp.sock -m 007 wsgi:app 
+
+[Install]
+WantedBy=multi-user.target
