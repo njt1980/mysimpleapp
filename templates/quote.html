@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Quote</title>
+        <style>body { background-image: url({{ url_for('static',filename = 'beach.jpg') }}); }</style>
     </head>
     <body>
     </br>
@@ -8,7 +9,7 @@
         <div>{{ quote }}</div></br>
         <div> - {{ author}}</div></br></br>
         <form action="{{ url_for('gimmeaquote') }}" method="GET">
-            <button type="submit" name="GimmeAQuote">GimmeAnother</button>
+            <button type="submit" name="GimmeAQuote">GimmeAnotherQuote</button>
         </form>
         <form action="{{ url_for('welcome') }}" method="GET">
             <button type="submit" name="Home">TakeMeHome</button>

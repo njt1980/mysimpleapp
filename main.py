@@ -19,3 +19,6 @@ def gimmeadogpic():
     response = requests.get("https://dog.ceo/api/breeds/image/random");
     dogpic = response.json()['message'];
     return render_template('dogpic.html',dogpic = dogpic);
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0:5000')

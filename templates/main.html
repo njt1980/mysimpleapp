@@ -1,9 +1,12 @@
 <html>
     <head>
         <title>Welcome</title>
+        <style>body { background-image: url({{ url_for('static',filename = 'beach.jpg') }}); }</style>
     </head>
     <body>
-        <h1 style="text-align: center;">What do you want?</h1></br></br>
+        <h1 style="text-align: center;">Whaddaya want???</h1></br></br>
+        <!-- <img src="{{ url_for('static',filename = 'beach.jpg') }}" /> -->
+        
         <form action="{{ url_for('gimmeaquote') }}" method="GET">
             <!-- <input type="button" value="MyButton"> -->
             <button name="GetAQuote" type="submit">GimmeAQuote</button>
